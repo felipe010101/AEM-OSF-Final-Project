@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" 
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Header Settings"
+    width="777px"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+	        <container
+	        	cq:showOnCreate="{Boolean}true"
+		        jcr:primaryType="nt:unstructured"
+		        sling:resourceType="granite/ui/components/coral/foundation/container"
+		        margin="{Boolean}true">
+		        <items jcr:primaryType="nt:unstructured">
+                    <logoTitle 
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/textfield"
+                        fieldLabel="Logo Title"
+                        name="./logoTitle" 
+                        required="{Boolean}true"/>
+                    <logoLink 
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                        fieldLabel="Logo Link"
+                        name="./logoLink" 
+                        required="{Boolean}true"/>
+                    <links 
+                    	jcr:primaryType="nt:unstructured"
+						sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+						composite="{Boolean}true" 
+						eaem-show-on-collapse="EAEM.showProductName"
+						fieldLabel="Links">
+						<field 
+							jcr:primaryType="nt:unstructured"
+							sling:resourceType="granite/ui/components/coral/foundation/container"
+							name="./links">
+							<items jcr:primaryType="nt:unstructured">
+								<column
+									granite:class="foundation-layout-util-maximized-alt coral-Form-fieldwrapper"
+									jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/coral/foundation/container">
+									<items jcr:primaryType="nt:unstructured">									
+                                        <title 
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                            fieldLabel="Link Title"
+                                            name="./titlePath"
+                                            required="{Boolean}true"/>
+                                        <linkPath 
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                            fieldLabel="Link Path"
+                                            name="./linkPath"
+                                            required="{Boolean}true"/>
+									</items>
+								</column>
+							</items>
+						</field>
+					</links>
+		        </items>
+			</container>
+		</items>
+	</content>
+</jcr:root>
